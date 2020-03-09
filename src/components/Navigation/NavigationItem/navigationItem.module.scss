@@ -1,0 +1,10 @@
+.text {
+  font-size: 1.2rem;
+  color: #808080;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

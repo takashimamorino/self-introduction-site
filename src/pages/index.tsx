@@ -1,5 +1,14 @@
 import { NextPage } from 'next'
 
-const Home: NextPage = () => <></>
+import { Navigation } from '../components/Navigation'
+
+import '../styles/reset.module.scss'
+import '../styles/app.module.scss'
+
+const Home: NextPage = () => (
+  <>
+    <Navigation />
+  </>
+)
 
 export default Home

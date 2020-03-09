@@ -1,0 +1,18 @@
+.container {
+  background-color: #F0F0F0;
+  width: 100%;
+  max-width: 15rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.list {
+  text-align: center;
+  margin-top: 10rem;
+
+  .item {
+    padding-bottom: 2rem;
+  }
+}
