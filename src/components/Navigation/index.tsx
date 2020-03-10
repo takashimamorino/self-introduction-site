@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { NavigationItem } from './NavigationItem'
+import { NavigationItem } from '../NavigationItem'
 
 import styles from './navigation.module.scss'
 
