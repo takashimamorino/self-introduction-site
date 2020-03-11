@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { NavigationItem } from '../NavigationItem'
+import { Item } from './Item'
 
 import styles from './navigation.module.scss'
 
@@ -16,7 +16,7 @@ export const Navigation: FC = () => (
     <ul className={styles.list}>
       {navigationList.map((item, index) => (
         <li className={styles.item} key={index}>
-          <NavigationItem jumpPoint={item.jumpPoint} text={item.linkText} />
+          <Item jumpPoint={item.jumpPoint} text={item.linkText} />
         </li>
       ))}
     </ul>
