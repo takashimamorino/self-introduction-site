@@ -9,7 +9,7 @@ const Home: NextPage = () => (
     <Navigation />
     <main className={styles.mainContainer}>
       <div className={styles.inner}>
-        <article>
+        <article className={styles.aboutContainer}>
           <div className={styles.profile}>
             <img src="/image_profile.svg" alt="プロフィール画像" />
             <div className={styles.myName}>
@@ -18,8 +18,7 @@ const Home: NextPage = () => (
             </div>
           </div>
           <p className={styles.lead}>
-            組織もエンジニアリングできるエンジニアを目指しています。
-            技術だけではなく、サービス作り、組織論にも関心があります。
+            組織もエンジニアリングできるエンジニアを目指しています。技術だけではなく、サービス作り、組織論にも関心があります。
           </p>
         </article>
       </div>
