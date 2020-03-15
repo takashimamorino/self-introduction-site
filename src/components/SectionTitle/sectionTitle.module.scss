@@ -1,0 +1,29 @@
+.line {
+  position: absolute;
+  content: '';
+  right: 0;
+  margin: auto;
+  width: 0.1rem;
+  height: 3rem;
+  background-color: #333;
+  transform: rotate(0.13turn);
+}
+
+.title {
+  position: relative;
+  font-size: 2.4rem;
+  font-weight: normal;
+  letter-spacing: 0.3rem;
+
+  &:before {
+    @extend .line;
+    top: -2.5rem;
+    left: 6rem;
+  }
+
+  &:after {
+    @extend .line;
+    top: 3rem;
+    left: -6rem;
+  }
+}
