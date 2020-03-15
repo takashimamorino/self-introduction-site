@@ -1,6 +1,7 @@
 import { NextPage } from 'next'
 
 import { Navigation } from '../components/Navigation'
+import { SNS } from '../components/SNS'
 
 import styles from '../styles/app.module.scss'
 
@@ -20,6 +21,7 @@ const Home: NextPage = () => (
           <p className={styles.lead}>
             組織もエンジニアリングできるエンジニアを目指しています。技術だけではなく、サービス作り、組織論にも関心があります。
           </p>
+          <SNS />
         </article>
       </div>
     </main>
