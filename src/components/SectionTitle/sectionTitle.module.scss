@@ -11,9 +11,9 @@
 
 .title {
   position: relative;
-  font-size: 2.4rem;
   font-weight: normal;
   letter-spacing: 0.3rem;
+  text-align: center;
 
   &:before {
     @extend .line;
@@ -23,7 +23,26 @@
 
   &:after {
     @extend .line;
-    top: 3rem;
     left: -6rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 2rem;
+
+    &:after {
+      top: 2.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 2.4rem;
+
+    &:after {
+      top: 3rem;
+    }
   }
 }
