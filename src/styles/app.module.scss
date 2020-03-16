@@ -4,6 +4,15 @@
   letter-spacing: 0.1rem;
 }
 
+.skillsHeader {
+  font-weight: normal;
+  text-align: left;
+}
+
+.annotation {
+  text-align: right;
+}
+
 // SP
 @media only screen and (max-width: 767px) {
   .mainContainer {
@@ -25,6 +34,15 @@
   .lead {
     margin-top: 1rem;
     font-size: 1.6rem;
+  }
+
+  .skillsContainer {
+    margin-top: 6rem;
+
+    .skillsHeader {
+      font-size: 1.6rem;
+      margin-top: 4rem;
+    }
   }
 }
 
@@ -67,5 +85,14 @@
     font-size: 1.8rem;
     margin-top: 3rem;
     text-align: left;
+  }
+
+  .skillsContainer {
+    margin-top: 10rem;
+
+    .skillsHeader {
+      font-size: 1.8rem;
+      margin-top: 6rem;
+    }
   }
 }

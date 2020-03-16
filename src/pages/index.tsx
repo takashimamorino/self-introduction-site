@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 
 import { Navigation } from '../components/Navigation'
 import { SNS } from '../components/SNS'
+import { SectionTitle } from '../components/SectionTitle'
 
 import styles from '../styles/app.module.scss'
 
@@ -22,6 +23,12 @@ const Home: NextPage = () => (
             組織もエンジニアリングできるエンジニアを目指しています。技術だけではなく、サービス作り、組織論にも関心があります。
           </p>
           <SNS />
+        </article>
+        <article className={styles.skillsContainer}>
+          <SectionTitle title="SKILLS" />
+          <h2 className={styles.skillsHeader}>言語・フレームワークなど</h2>
+          <h2 className={styles.skillsHeader}>クラウド・その他</h2>
+          <p className={styles.annotation}>※実業務で使用したもののみ</p>
         </article>
       </div>
     </main>
