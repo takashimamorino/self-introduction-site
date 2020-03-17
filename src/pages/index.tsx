@@ -1,4 +1,5 @@
-import { NextPage } from 'next'
+import { NextPage, GetStaticProps } from 'next'
+import axios from 'axios'
 
 import { Navigation } from '../components/Navigation'
 import { SNS } from '../components/SNS'
@@ -6,33 +7,58 @@ import { SectionTitle } from '../components/SectionTitle'
 
 import styles from '../styles/app.module.scss'
 
-const Home: NextPage = () => (
-  <>
-    <Navigation />
-    <main className={styles.mainContainer}>
-      <div className={styles.inner}>
-        <article className={styles.aboutContainer}>
-          <div className={styles.profile}>
-            <img src="/image_profile.svg" alt="プロフィール画像" />
-            <div className={styles.myName}>
-              <h2 className={styles.myNameJapanease}>高島克彦</h2>
-              <p className={styles.myNameAlphabet}>Takashima Katsuhiko</p>
+type Skills = {
+  id: string
+  createdAt: string
+  updatedAt: string
+  languages: string
+  other: string
+}
+
+type Props = {
+  skills: Skills
+}
+
+const Home: NextPage<Props> = ({ skills }) => {
+  console.log(skills)
+  return (
+    <>
+      <Navigation />
+      <main className={styles.mainContainer}>
+        <div className={styles.inner}>
+          <article className={styles.aboutContainer}>
+            <div className={styles.profile}>
+              <img src="/image_profile.svg" alt="プロフィール画像" />
+              <div className={styles.myName}>
+                <h2 className={styles.myNameJapanease}>高島克彦</h2>
+                <p className={styles.myNameAlphabet}>Takashima Katsuhiko</p>
+              </div>
             </div>
-          </div>
-          <p className={styles.lead}>
-            組織もエンジニアリングできるエンジニアを目指しています。技術だけではなく、サービス作り、組織論にも関心があります。
-          </p>
-          <SNS />
-        </article>
-        <article className={styles.skillsContainer}>
-          <SectionTitle title="SKILLS" />
-          <h2 className={styles.skillsHeader}>言語・フレームワークなど</h2>
-          <h2 className={styles.skillsHeader}>クラウド・その他</h2>
-          <p className={styles.annotation}>※実業務で使用したもののみ</p>
-        </article>
-      </div>
-    </main>
-  </>
-)
+            <p className={styles.lead}>
+              組織もエンジニアリングできるエンジニアを目指しています。技術だけではなく、サービス作り、組織論にも関心があります。
+            </p>
+            <SNS />
+          </article>
+          <article className={styles.skillsContainer}>
+            <SectionTitle title="SKILLS" />
+            <h2 className={styles.skillsHeader}>言語・フレームワークなど</h2>
+            <h2 className={styles.skillsHeader}>クラウド・その他</h2>
+            <p className={styles.annotation}>※実業務で使用したもののみ</p>
+          </article>
+        </div>
+      </main>
+    </>
+  )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const key = {
+    headers: { 'X-API-KEY': process.env.api_key }
+  }
+  const res = await axios.get('https://self-site.microcms.io/api/v1/skills', key)
+  const skills = await res.data
+
+  return { props: { skills } }
+}
 
 export default Home
