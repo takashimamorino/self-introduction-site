@@ -37,7 +37,7 @@ const Home: NextPage<Props> = ({ skills }) => (
           </p>
           <SNS />
         </article>
-        <article className={styles.skillsContainer}>
+        <article className={styles.sectionContainer}>
           <SectionTitle title="SKILLS" />
           <h2 className={styles.skillsHeader}>言語・フレームワークなど</h2>
           <p className={styles.skillsText}>{skills.languages}</p>
@@ -46,6 +46,12 @@ const Home: NextPage<Props> = ({ skills }) => (
           <p className={styles.annotation}>
             <small>※実業務で使用したもののみ</small>
           </p>
+        </article>
+        <article className={styles.sectionContainer}>
+          <SectionTitle title="EXPERIENCE" />
+        </article>
+        <article className={styles.sectionContainer}>
+          <SectionTitle title="WORKS" />
         </article>
       </div>
     </main>
