@@ -9,6 +9,11 @@
   text-align: left;
 }
 
+.skillsText {
+  margin-top: 1rem;
+  text-align: left;
+}
+
 .annotation {
   text-align: right;
 }
@@ -42,6 +47,10 @@
     .skillsHeader {
       font-size: 1.6rem;
       margin-top: 4rem;
+    }
+
+    .skillsText {
+      font-size: 1.6rem;
     }
   }
 }
@@ -93,6 +102,10 @@
     .skillsHeader {
       font-size: 1.8rem;
       margin-top: 6rem;
+    }
+
+    .skillsText {
+      font-size: 1.8rem;
     }
   }
 }
