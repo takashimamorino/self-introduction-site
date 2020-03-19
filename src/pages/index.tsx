@@ -43,7 +43,9 @@ const Home: NextPage<Props> = ({ skills }) => (
           <p className={styles.skillsText}>{skills.languages}</p>
           <h2 className={styles.skillsHeader}>クラウド・その他</h2>
           <p className={styles.skillsText}>{skills.other}</p>
-          <p className={styles.annotation}>※実業務で使用したもののみ</p>
+          <p className={styles.annotation}>
+            <small>※実業務で使用したもののみ</small>
+          </p>
         </article>
       </div>
     </main>
