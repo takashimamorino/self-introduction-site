@@ -4,6 +4,7 @@ import axios from 'axios'
 import { Navigation } from '../components/Navigation'
 import { SNS } from '../components/SNS'
 import { SectionTitle } from '../components/SectionTitle'
+import { Experience } from '../components/Experience'
 
 import styles from '../styles/app.module.scss'
 
@@ -15,11 +16,22 @@ type Skills = {
   other: string
 }
 
-type Props = {
-  skills: Skills
+type Experience = {
+  id: string
+  createdAt: string
+  updatedAt: string
+  term: string
+  title: string
+  skills: string
+  article: string
 }
 
-const Home: NextPage<Props> = ({ skills }) => (
+type Props = {
+  skills: Skills
+  experience: Experience[]
+}
+
+const Home: NextPage<Props> = ({ skills, experience }) => (
   <>
     <Navigation />
     <main className={styles.mainContainer}>
@@ -47,9 +59,7 @@ const Home: NextPage<Props> = ({ skills }) => (
             <small>※実業務で使用したもののみ</small>
           </p>
         </article>
-        <article className={styles.sectionContainer}>
-          <SectionTitle title="EXPERIENCE" />
-        </article>
+        <Experience resource={experience} />
         <article className={styles.sectionContainer}>
           <SectionTitle title="WORKS" />
         </article>
@@ -62,10 +72,13 @@ export const getStaticProps: GetStaticProps = async () => {
   const key = {
     headers: { 'X-API-KEY': process.env.api_key }
   }
-  const res = await axios.get('https://self-site.microcms.io/api/v1/skills', key)
-  const skills = await res.data
+  let skills = await axios.get('https://self-site.microcms.io/api/v1/skills', key)
+  skills = await skills.data
 
-  return { props: { skills } }
+  let experience = await axios.get('https://self-site.microcms.io/api/v1/experience', key)
+  experience = experience.data.contents
+
+  return { props: { skills, experience } }
 }
 
 export default Home
