@@ -47,7 +47,7 @@ const Home: NextPage<Props> = ({ skills, experience, works }) => (
     <Navigation />
     <main className={styles.mainContainer}>
       <div className={styles.inner}>
-        <article className={styles.aboutContainer}>
+        <article>
           <div className={styles.profile}>
             <img src="/image_profile.svg" alt="プロフィール画像" />
             <div className={styles.myName}>
