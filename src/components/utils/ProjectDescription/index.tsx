@@ -14,6 +14,6 @@ export const ProjectDescription: FC<Props> = ({ term, title, skills, description
     <p className={styles.term}>{term}</p>
     <h2 className={styles.title}>{title}</h2>
     <p className={styles.skills}>【 {skills} 】</p>
-    <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />
+    <div className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />
   </section>
 )
