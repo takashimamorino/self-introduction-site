@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { SectionTitle } from '../SectionTitle'
+import { SectionTitle } from '../utils/SectionTitle'
 import { ProjectDescription } from '../utils/ProjectDescription'
 
 import styles from './works.module.scss'

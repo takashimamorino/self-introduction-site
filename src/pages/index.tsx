@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import { Navigation } from '../components/Navigation'
 import { SNS } from '../components/SNS'
-import { SectionTitle } from '../components/SectionTitle'
+import { SectionTitle } from '../components/utils/SectionTitle'
 import { Experience } from '../components/Experience'
 import { Works } from '../components/Works'
 
