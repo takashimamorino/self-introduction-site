@@ -20,7 +20,7 @@ type Props = {
 }
 
 export const Experience: FC<Props> = ({ resource }) => (
-  <article className={styles.container}>
+  <article id="experience" className={styles.container}>
     <SectionTitle title="EXPERIENCE" />
     {resource.map((item: Experience) => (
       <ProjectDescription

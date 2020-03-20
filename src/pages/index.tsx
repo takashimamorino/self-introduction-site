@@ -60,7 +60,7 @@ const Home: NextPage<Props> = ({ skills, experience, works }) => (
           </p>
           <SNS />
         </article>
-        <article className={styles.sectionContainer}>
+        <article id="skills" className={styles.sectionContainer}>
           <SectionTitle title="SKILLS" />
           <h2 className={styles.skillsHeader}>言語・フレームワークなど</h2>
           <p className={styles.skillsText}>{skills.languages}</p>
