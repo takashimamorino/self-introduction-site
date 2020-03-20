@@ -70,8 +70,8 @@ const Home: NextPage<Props> = ({ skills, experience, works }) => (
             <small>※実業務で使用したもののみ</small>
           </p>
         </article>
-        <Experience resource={experience} />
-        <Works resource={works} />
+        <Experience contents={experience} />
+        <Works contents={works} />
       </div>
     </main>
   </>

@@ -15,13 +15,13 @@ type Works = {
 }
 
 type Props = {
-  resource: Works[]
+  contents: Works[]
 }
 
-export const Works: FC<Props> = ({ resource }) => (
+export const Works: FC<Props> = ({ contents }) => (
   <article id="works" className={styles.container}>
     <SectionTitle title="Works" />
-    {resource.map((item: Works) => (
+    {contents.map((item: Works) => (
       <ProjectDescription key={item.id} title={item.title} skills={item.skills} description={item.description} />
     ))}
   </article>
