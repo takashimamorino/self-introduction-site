@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import styles from './projectDescription.module.scss'
 
 type Props = {
-  term: string
+  term?: string
   title: string
   skills: string
   description: string
