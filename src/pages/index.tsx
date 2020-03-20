@@ -5,6 +5,7 @@ import { Navigation } from '../components/Navigation'
 import { SNS } from '../components/SNS'
 import { SectionTitle } from '../components/SectionTitle'
 import { Experience } from '../components/Experience'
+import { Works } from '../components/Works'
 
 import styles from '../styles/app.module.scss'
 
@@ -26,12 +27,22 @@ type Experience = {
   article: string
 }
 
+type Works = {
+  id: string
+  createdAt: string
+  updatedAt: string
+  title: string
+  skills: string
+  description: string
+}
+
 type Props = {
   skills: Skills
   experience: Experience[]
+  works: Works[]
 }
 
-const Home: NextPage<Props> = ({ skills, experience }) => (
+const Home: NextPage<Props> = ({ skills, experience, works }) => (
   <>
     <Navigation />
     <main className={styles.mainContainer}>
@@ -60,9 +71,7 @@ const Home: NextPage<Props> = ({ skills, experience }) => (
           </p>
         </article>
         <Experience resource={experience} />
-        <article className={styles.sectionContainer}>
-          <SectionTitle title="WORKS" />
-        </article>
+        <Works resource={works} />
       </div>
     </main>
   </>
@@ -78,7 +87,10 @@ export const getStaticProps: GetStaticProps = async () => {
   let experience = await axios.get('https://self-site.microcms.io/api/v1/experience', key)
   experience = experience.data.contents
 
-  return { props: { skills, experience } }
+  let works = await axios.get('https://self-site.microcms.io/api/v1/works', key)
+  works = await works.data.contents
+
+  return { props: { skills, experience, works } }
 }
 
 export default Home
