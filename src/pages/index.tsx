@@ -55,9 +55,7 @@ const Home: NextPage<Props> = ({ skills, experience, works }) => (
               <p className={styles.myNameAlphabet}>Takashima Katsuhiko</p>
             </div>
           </div>
-          <p className={styles.lead}>
-            組織もエンジニアリングできるエンジニアを目指しています。技術だけではなく、サービス作り、組織論にも関心があります。
-          </p>
+          <p className={styles.lead}>都内でエンジニアをしています。現在は主にReactを使ったSPA開発を担当しています。</p>
           <SNS />
         </article>
         <Skills contents={skills} />
