@@ -6,6 +6,7 @@ import styles from './navigation.module.scss'
 
 const navigationList = [
   { jumpPoint: '#', linkText: 'ABOUT' },
+  { jumpPoint: '#interests', linkText: 'INTERESTS' },
   { jumpPoint: '#skills', linkText: 'SKILLS' },
   { jumpPoint: '#experience', linkText: 'EXPERIENCE' },
   { jumpPoint: '#works', linkText: 'WORKS' }
