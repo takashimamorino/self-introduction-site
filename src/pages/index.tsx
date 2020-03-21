@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import { Navigation } from '../components/Navigation'
 import { SNS } from '../components/SNS'
-import { SectionTitle } from '../components/utils/SectionTitle'
+import { Skills } from '../components/Skills'
 import { Experience } from '../components/Experience'
 import { Works } from '../components/Works'
 
@@ -45,7 +45,7 @@ type Props = {
 const Home: NextPage<Props> = ({ skills, experience, works }) => (
   <>
     <Navigation />
-    <main className={styles.mainContainer}>
+    <main className={styles.container}>
       <div className={styles.inner}>
         <article>
           <div className={styles.profile}>
@@ -60,16 +60,7 @@ const Home: NextPage<Props> = ({ skills, experience, works }) => (
           </p>
           <SNS />
         </article>
-        <article id="skills" className={styles.sectionContainer}>
-          <SectionTitle title="SKILLS" />
-          <h2 className={styles.skillsHeader}>言語・フレームワークなど</h2>
-          <p className={styles.skillsText}>{skills.languages}</p>
-          <h2 className={styles.skillsHeader}>クラウド・その他ツール</h2>
-          <p className={styles.skillsText}>{skills.other}</p>
-          <p className={styles.annotation}>
-            <small>※実業務で使用したもののみ</small>
-          </p>
-        </article>
+        <Skills contents={skills} />
         <Experience contents={experience} />
         <Works contents={works} />
       </div>

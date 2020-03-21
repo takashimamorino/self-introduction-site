@@ -8,24 +8,8 @@
   letter-spacing: 0.1rem;
 }
 
-.skillsHeader {
-  font-weight: normal;
-  text-align: left;
-}
-
-.skillsText {
-  margin-top: 1rem;
-  text-align: left;
-}
-
-.annotation {
-  text-align: right;
-  margin-top: 0.5rem;
-}
-
-// SP
 @media only screen and (max-width: 767px) {
-  .mainContainer {
+  .container {
     margin: 2rem 0 5rem;
   }
 
@@ -41,25 +25,10 @@
     margin-top: 1rem;
     font-size: 1.6rem;
   }
-
-  .sectionContainer {
-    margin-top: 6rem;
-  }
-
-  .skillsHeader {
-    font-size: 1.6rem;
-    margin-top: 4rem;
-  }
-
-  .skillsText {
-    font-size: 1.6rem;
-  }
-
 }
 
-// PC
 @media only screen and (min-width: 768px) {
-  .mainContainer {
+  .container {
     margin: 5rem auto 10rem;
     width: 100%;
     max-width: 85rem;
@@ -92,18 +61,5 @@
     font-size: 1.8rem;
     margin-top: 3rem;
     text-align: left;
-  }
-
-  .sectionContainer {
-    margin-top: 10rem;
-  }
-
-  .skillsHeader {
-    font-size: 1.8rem;
-    margin-top: 6rem;
-  }
-
-  .skillsText {
-    font-size: 1.8rem;
   }
 }
