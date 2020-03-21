@@ -8,6 +8,18 @@
   letter-spacing: 0.1rem;
 }
 
+.blogLink {
+  color: #333;
+  text-decoration: none;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: #333;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .container {
     margin: 2rem 0 5rem;
@@ -24,6 +36,11 @@
   .lead {
     margin-top: 1rem;
     font-size: 1.6rem;
+  }
+
+  .blogLink {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -61,5 +78,9 @@
     font-size: 1.8rem;
     margin-top: 3rem;
     text-align: left;
+  }
+
+  .blogLink {
+    display: inline-block;
   }
 }

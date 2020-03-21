@@ -51,6 +51,9 @@ const Home: NextPage<Props> = ({ skills, experience, works }) => (
           </div>
           <p className={styles.lead}>都内でエンジニアをしています。現在は主にReactを使ったSPA開発を担当しています。</p>
           <SNS />
+          <a className={styles.blogLink} href="https://qiita.com/katsutakashima" target="_blank" rel="noopener">
+            技術ブログはこちら
+          </a>
         </article>
         <Interests />
         <Skills contents={skills} />
