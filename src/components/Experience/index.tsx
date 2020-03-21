@@ -7,8 +7,6 @@ import styles from './experience.module.scss'
 
 type Experience = {
   id: string
-  createdAt: string
-  updatedAt: string
   term: string
   title: string
   skills: string
@@ -22,7 +20,7 @@ type Props = {
 export const Experience: FC<Props> = ({ contents }) => (
   <article id="experience" className={styles.container}>
     <SectionTitle title="EXPERIENCE" />
-    {contents.map((item: Experience) => (
+    {contents.map(item => (
       <ProjectDescription
         key={item.id}
         term={item.term}

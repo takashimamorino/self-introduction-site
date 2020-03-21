@@ -10,17 +10,12 @@ import { Works } from '../components/Works'
 import styles from '../styles/app.module.scss'
 
 type Skills = {
-  id: string
-  createdAt: string
-  updatedAt: string
   languages: string
   other: string
 }
 
 type Experience = {
   id: string
-  createdAt: string
-  updatedAt: string
   term: string
   title: string
   skills: string
@@ -29,8 +24,6 @@ type Experience = {
 
 type Works = {
   id: string
-  createdAt: string
-  updatedAt: string
   title: string
   skills: string
   description: string

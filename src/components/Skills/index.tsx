@@ -5,9 +5,6 @@ import { SectionTitle } from '../utils/SectionTitle'
 import styles from './skills.module.scss'
 
 type Skills = {
-  id: string
-  createdAt: string
-  updatedAt: string
   languages: string
   other: string
 }
