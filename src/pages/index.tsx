@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import { Navigation } from '../components/Navigation'
 import { SNS } from '../components/SNS'
+import { Interests } from '../components/Interests'
 import { Skills } from '../components/Skills'
 import { Experience } from '../components/Experience'
 import { Works } from '../components/Works'
@@ -51,6 +52,7 @@ const Home: NextPage<Props> = ({ skills, experience, works }) => (
           <p className={styles.lead}>都内でエンジニアをしています。現在は主にReactを使ったSPA開発を担当しています。</p>
           <SNS />
         </article>
+        <Interests />
         <Skills contents={skills} />
         <Experience contents={experience} />
         <Works contents={works} />

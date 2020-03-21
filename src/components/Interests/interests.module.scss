@@ -1,0 +1,25 @@
+.text {
+  text-align: left;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    margin-top: 6rem;
+  }
+
+  .text{
+    font-size: 1.6rem;
+    margin-top: 4rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    margin-top: 10rem;
+  }
+
+  .text{
+    font-size: 1.8rem;
+    margin-top: 6rem;
+  }
+}
